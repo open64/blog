@@ -1,32 +1,25 @@
 source 'https://rubygems.org'
 
-ruby "1.9.3"
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
-#group :development do
-#  gem 'sqlite3'
-#end
+group :development do
+  gem 'sqlite3'
+end
 
-# Use postgreSQL as the database for Active Record
-#group :production do
-gem 'pg'
-#end
-
-gem 'heroku'
+group :production do
+  gem 'pg'
+end
 
 # Use SCSS for stylesheets
-group :assets do
-	gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.0'
 
-	# Use Uglifier as compressor for JavaScript assets
-	gem 'uglifier', '>= 1.3.0'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 
-	# Use CoffeeScript for .js.coffee assets and views
-	gem 'coffee-rails', '~> 4.0.0'
-end
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -45,10 +38,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'rails_12factor', group: :production
-
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+# gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'

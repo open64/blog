@@ -1,4 +1,10 @@
 Blog::Application.routes.draw do
+  get "about/about"
+  get "home/home"
+  get "user/new"
+  get "user/registration"
+  get "user/log_in"
+  get "user/log_out"
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.

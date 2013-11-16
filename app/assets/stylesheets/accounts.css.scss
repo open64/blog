@@ -1,0 +1,16 @@
+.new_account #error_explanation {
+  font-size: 16px;
+  font-style: bold;
+  border: 1px solid #FF0000;
+  ul li {
+    color: #ff0000;
+    font-size: 14px;
+    list-style-type: disc;
+    font-weight: bold;
+    font-family: Arial;
+  }
+}
+
+.new_account .field_with_errors {
+  background-color: antiquewhite;
+}

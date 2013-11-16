@@ -2,13 +2,29 @@
 <html>
 <head>
   <title>Blog</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bootstrap-select', media: 'all', 'data-turbolinks-track' => true %>
+
 </head>
 <body>
-
+<header>
+  <nav>
+	<ul class="nav">
+	  <li><%= link_to 'Home', posts_path %></li>
+	  <!--<li><%= link_to 'About', about_about_path %></li>-->
+	  <li><%= link_to 'Registration', new_account_path %></li>
+	  <li><%= link_to 'Log in', user_log_in_path %> </li>
+	  <li><%= link_to 'My page', accounts_path %> </li>
+	</ul>
+  </nav>
+</header>
 <%= yield %>
 
+<%= javascript_include_tag 'bootstrap', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'bootstrap-select', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'bootstrap-datepicker', 'data-turbolinks-track' => true %>
 </body>
 </html>

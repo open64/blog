@@ -11,7 +11,7 @@ class AccountsController < ApplicationController
 	def create
 		@account = Account.new(params[:account])
 		if @account.save
-			#sign_in @account
+			sign_in @account
 			redirect_to @account
 		else
 			render 'new'

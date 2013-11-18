@@ -8,4 +8,10 @@ class Account < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
             uniqueness: {case_sensitive: false}
   before_save { |account| account.email = email.downcase }
+  before_save :create_remember_token
+
+	private
+		def create_remember_token
+			self.remember_token = SecureRandom.urlsafe_base64
+		end
 end

@@ -1,3 +1,5 @@
+#include SessionsHelper
+
 class AccountsController < ApplicationController
 	def new
 		@account = Account.new
@@ -9,7 +11,8 @@ class AccountsController < ApplicationController
 	def create
 		@account = Account.new(params[:account])
 		if @account.save
-			redirect_to posts_path
+			#sign_in @account
+			redirect_to @account
 		else
 			render 'new'
 		end

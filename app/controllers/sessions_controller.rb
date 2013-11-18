@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 	def create
 		account = Account.find_by_email(params[:session][:email].downcase)
 		if account && account.authenticate(params[:session][:password])
-			sing_in account
+			sign_in account
 			redirect_to account
 		else
 			flash.now[:error] = 'Invalid email/password combination'

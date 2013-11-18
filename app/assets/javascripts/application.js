@@ -1,4 +1,3 @@
-/= require twitter/bootstrap
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -11,9 +10,16 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require bootstrap
-//= require_tree .
+//= require bootstrap/affix
+//= require bootstrap/alert
+//= require bootstrap/button
+//= require bootstrap/carousel
+//= require bootstrap/collapse
+//= require bootstrap/dropdown
+//= require bootstrap/modal
+//= require bootstrap/popover
+//= require bootstrap/scrollspy
+//= require bootstrap/tab
+//= require bootstrap/tooltip
+//= require bootstrap/transition
 

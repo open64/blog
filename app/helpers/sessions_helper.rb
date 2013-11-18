@@ -1,5 +1,5 @@
 module SessionsHelper
-	def sing_in(account)
+	def sign_in(account)
 		cookies.permanent[:remember_token] = account.remember_token
 		self.current_account = account
 	end
